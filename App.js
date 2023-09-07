@@ -1,12 +1,25 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+
+
+
+import { ReduxProvider } from './src/redux';
+import AppRouter from './src/routes/AppRouter';
+import { navigationRef } from './src/routes/RootNavigation';
+
+// import { navigationRef } from';
+
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ReduxProvider>
+      <NavigationContainer ref={navigationRef}>
+        <AppRouter />
+      </NavigationContainer>
+    </ReduxProvider>
+
   );
 }
 
