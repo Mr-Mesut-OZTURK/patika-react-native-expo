@@ -4,17 +4,16 @@ import { useRoute } from '@react-navigation/native';
 
 import { navigate } from '../../routes/RootNavigation'
 
-const HomeLayout = ({ children }) => {
+const HomeLayout = ({ children, style }) => {
 
     const route = useRoute();
-    // console.log(route.name);
 
     const handlePress = () => {
         navigate("home");
     }
 
     return (
-        <View style={styles.container}>
+        <View style={{ ...styles.container, ...style }}>
 
             {
                 route.name !== "home" && (
@@ -41,7 +40,8 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        paddingTop: Platform.OS === "ios" ? 60 : 60
+        paddingTop: Platform.OS === "ios" ? 60 : 60,
+        paddingBottom: Platform.OS === "ios" ? 60 : 60,
     },
     button: {
         position: 'absolute',
@@ -49,7 +49,8 @@ const styles = StyleSheet.create({
         left: 20,
         backgroundColor: '#000',
         borderRadius: 3,
-        padding: 8
+        padding: 8,
+        zIndex: 10,
     },
     goBackText: {
         color: '#fff',

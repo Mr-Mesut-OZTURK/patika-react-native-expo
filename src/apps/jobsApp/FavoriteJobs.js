@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import { JobsAppLayout } from '@src/src/layouts'
 import JobItem from '@src/src/apps/jobsApp/_JobItem'
+import { jobsFunction } from '@src/src/redux'
 
 const FavoriteJobs = () => {
 

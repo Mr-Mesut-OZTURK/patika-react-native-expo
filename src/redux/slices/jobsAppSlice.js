@@ -14,7 +14,6 @@ const initialState = {
 
 const fetchJobsFromApi = createAsyncThunk("jobs/fetchJobsFromApi", async ({ page = 1 }) => {
     const response = await axios.get(`https://www.themuse.com/api/public/jobs?page=1&items_per_page=10`)
-    // console.log({ response })
     return response
 })
 
@@ -43,7 +42,6 @@ export const jobsAppSlice = createSlice({
             state.loading = 'pending'
         }),
             builder.addCase(fetchJobsFromApi.fulfilled, (state, action) => {
-                // console.log("state ", action.payload?.data?.results)
                 state.jobs = [...state.jobs, ...action?.payload?.data?.results]
                 state.loading = "succeeded"
 
