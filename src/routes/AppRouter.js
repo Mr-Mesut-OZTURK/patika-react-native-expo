@@ -3,6 +3,7 @@ import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from '../pages/HomeScreen';
 import JobRoutes from './nestedRoutes/JobRoutes';
+import ChatRoutes from './nestedRoutes/ChatRoutes';
 
 
 const Stack = createNativeStackNavigator();
@@ -16,6 +17,7 @@ const AppRouter = () => {
         >
             <Stack.Screen name="home" component={HomeScreen} />
             <Stack.Screen name="jobs" component={JobRoutes} />
+            <Stack.Screen name="chats" component={ChatRoutes} />
         </Stack.Navigator>
     )
 }

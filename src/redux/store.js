@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { Provider } from 'react-redux'
 import jobsAppSlice from './slices/jobsAppSlice'
+import chatAppSlice from './slices/chatAppSlice'
 
 export const store = configureStore({
     reducer: {
-        jobs: jobsAppSlice
+        jobs: jobsAppSlice,
+        chat: chatAppSlice,
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware({
         serializableCheck: false,

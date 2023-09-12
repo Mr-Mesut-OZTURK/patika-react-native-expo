@@ -2,16 +2,21 @@ import { Dimensions, ScrollView, StyleSheet, Text, TouchableOpacity, View } from
 import React from 'react'
 import { HomeLayout } from '../layouts'
 
+import { MaterialIcons } from '@expo/vector-icons';
+
 
 const apps = [
     {
         id: 1,
-        name: "jobs",
-        link: 'jobs'
+        name: "Jobs",
+        link: 'jobs',
+        icon: <MaterialIcons name="work" size={32} color="black" />
     },
     {
         id: 1,
-        name: "jobs"
+        name: "Chats",
+        link: "chats",
+        icon: <MaterialIcons name="chat" size={32} color="black" />
     },
     {
         id: 1,
@@ -46,6 +51,7 @@ const apps = [
         name: "jobs"
     },
 ]
+
 const HomeScreen = ({ navigation }) => {
 
     const handleGoToApp = (link) => {
@@ -67,9 +73,13 @@ const HomeScreen = ({ navigation }) => {
                                 style={styles.item_container(item)}
                                 onPress={() => handleGoToApp(item.link ?? "home")}
                             >
-                                <Text>
+
+                                {item.icon}
+
+                                <Text style={styles.item_header}>
                                     {item.name}
                                 </Text>
+
                             </TouchableOpacity>
                         )
                     })
@@ -110,6 +120,14 @@ const styles = StyleSheet.create({
         padding: 10,
         borderRadius: 5,
         marginBottom: 20,
-        height: 100
-    })
+        height: 100,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+    }),
+
+    item_header: {
+        fontSize: 24,
+        marginLeft: 15
+    }
 })
