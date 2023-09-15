@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { ChatsApp } from '@src/src/apps/chatsApp';
+import { ChatsApp } from '@src/src/apps/2-chatsApp';
 import { useSelector } from 'react-redux';
 
 
