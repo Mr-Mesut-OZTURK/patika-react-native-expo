@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { ActivityIndicator, Dimensions, FlatList, StyleSheet } from 'react-native'
 
-import { jobsFunction } from '@src/src/redux'
+import { jobsFunctions } from '@src/src/redux'
 import { JobsAppLayout } from '@src/src/layouts'
-import JobItem from '@src/src/apps/jobsApp/_JobItem'
+import JobItem from '@src/src/apps/1-jobsApp/_JobItem'
 
 const JobsHome = () => {
 
@@ -18,7 +18,7 @@ const JobsHome = () => {
     })
 
     useEffect(() => {
-        dispatch(jobsFunction.fetchJobsFromApi({ page: variables?.pagination?.page }))
+        dispatch(jobsFunctions.fetchJobsFromApi({ page: variables?.pagination?.page }))
     }, [variables])
 
     const handleFetchMore = () => {
@@ -34,7 +34,7 @@ const JobsHome = () => {
     }
 
     const handleAddToFavorite = (item) => {
-        dispatch(jobsFunction.addToFavoriteJobs({ id: item.id }))
+        dispatch(jobsFunctions.addToFavoriteJobs({ id: item.id }))
     }
 
 

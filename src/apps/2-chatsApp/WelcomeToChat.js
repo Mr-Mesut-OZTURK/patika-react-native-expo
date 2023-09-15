@@ -7,7 +7,7 @@ import { Button as PaperButton } from 'react-native-paper'
 import { MyButtonOne } from '@src/src/components'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { useDispatch } from 'react-redux'
-import { chatFunction } from '@src/src/redux'
+import { chatFunctions } from '@src/src/redux'
 
 const WelcomeToChat = ({ navigation }) => {
 
@@ -25,7 +25,7 @@ const WelcomeToChat = ({ navigation }) => {
     const handleFetchLocalStorage = async () => {
         const response = await AsyncStorage.getItem("chatAppUser")
         if (response) {
-            dispatch(chatFunction.reduxHandleLogin(JSON.parse(response)))
+            dispatch(chatFunctions.reduxHandleLogin(JSON.parse(response)))
         }
         setLoading(false)
     }

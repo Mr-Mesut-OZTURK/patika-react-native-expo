@@ -3,8 +3,8 @@ import { Dimensions, FlatList, StyleSheet } from 'react-native'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { JobsAppLayout } from '@src/src/layouts'
-import JobItem from '@src/src/apps/jobsApp/_JobItem'
-import { jobsFunction } from '@src/src/redux'
+import JobItem from '@src/src/apps/1-jobsApp/_JobItem'
+import { jobsFunctions } from '@src/src/redux'
 
 const FavoriteJobs = () => {
 
@@ -14,7 +14,7 @@ const FavoriteJobs = () => {
 
 
     const handleAddToFavorite = (item) => {
-        dispatch(jobsFunction.addToFavoriteJobs({ id: item.id }))
+        dispatch(jobsFunctions.addToFavoriteJobs({ id: item.id }))
     }
 
 

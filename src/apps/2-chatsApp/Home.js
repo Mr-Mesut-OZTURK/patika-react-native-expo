@@ -4,7 +4,7 @@ import { Toast } from 'react-native-toast-message/lib/src/Toast';
 import { Timestamp, doc, setDoc, collection, getDocs, query, onSnapshot } from "firebase/firestore";
 import { ActivityIndicator, Dimensions, Modal, Platform, Pressable, RefreshControl, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
-import { chatFunction } from '@src/src/redux'
+import { chatFunctions } from '@src/src/redux'
 import { ChatsAppLayout } from '@src/src/layouts'
 import { MyTextInputOne } from '@src/src/components'
 import { firestoreDb } from '@src/src/config/firebaseConfig';
@@ -70,7 +70,7 @@ const Home = ({ navigation }) => {
     }, []);
 
     const handleLogout = () => {
-        dispatch(chatFunction.reduxChatLogout())
+        dispatch(chatFunctions.reduxChatLogout())
     }
 
     const handleChatRoomInputChange = (_, b) => {

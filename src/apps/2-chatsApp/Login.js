@@ -7,7 +7,7 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 import { ChatsAppLayout } from '@src/src/layouts'
 import { MyButtonOne, MyTextInputOne } from '@src/src/components'
 import { useDispatch } from 'react-redux';
-import { chatFunction } from '@src/src/redux';
+import { chatFunctions } from '@src/src/redux';
 
 
 const auth = getAuth();
@@ -54,7 +54,7 @@ const Login = ({ navigation }) => {
 
             const response = await signInWithEmailAndPassword(auth, values.email, values.password);
 
-            dispatch(chatFunction.reduxHandleLogin(response))
+            dispatch(chatFunctions.reduxHandleLogin(response))
             setValues({ ...values, loading: false })
 
             Toast.show({
