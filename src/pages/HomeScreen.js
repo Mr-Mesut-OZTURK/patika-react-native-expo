@@ -2,7 +2,7 @@ import { Dimensions, ScrollView, StyleSheet, Text, TouchableOpacity, View } from
 import React from 'react'
 import { HomeLayout } from '../layouts'
 
-import { MaterialIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons';
 
 
 const apps = [
@@ -13,42 +13,50 @@ const apps = [
         icon: <MaterialIcons name="work" size={32} color="black" />
     },
     {
-        id: 1,
+        id: 2,
         name: "Chats",
         link: "chats",
         icon: <MaterialIcons name="chat" size={32} color="black" />
     },
     {
-        id: 1,
-        name: "jobs"
+        id: 3,
+        name: "Diyetim",
+        link: "diyetim",
+        icon: <MaterialIcons name="fastfood" size={32} color="black" />
     },
     {
-        id: 1,
-        name: "jobs"
+        id: 4,
+        name: "Books",
+        link: "books",
+        icon: <MaterialIcons name="book" size={32} color="black" />
     },
     {
-        id: 1,
-        name: "jobs"
+        id: 5,
+        name: "Marvel",
+        link: "marvel",
+        icon: <MaterialIcons name="superscript" size={32} color="black" />
     },
     {
-        id: 1,
-        name: "jobs"
+        id: 6,
+        name: "Trivia",
+        link: "trivia",
+        icon: <MaterialIcons name="card-travel" size={32} color="black" />
     },
     {
-        id: 1,
-        name: "jobs"
+        id: 7,
+        name: "Weather",
+        link: "weather",
+        icon: <MaterialCommunityIcons name="weather-partly-snowy-rainy" size={32} color="black" />
     },
     {
-        id: 1,
-        name: "jobs"
+        id: 8,
+        name: "Restaurants",
+        link: "restaurants",
+        icon: <MaterialIcons name="restaurant" size={32} color="black" />
     },
     {
-        id: 1,
-        name: "jobs"
-    },
-    {
-        id: 1,
-        name: "jobs"
+        id: 9,
+        name: "Example"
     },
 ]
 
@@ -62,7 +70,7 @@ const HomeScreen = ({ navigation }) => {
         <HomeLayout>
             <Text style={styles.headerText}>Mesut Patika Apps</Text>
 
-            <ScrollView style={styles.scrollview} contentContainerStyle={{ alignItems: 'center' }}>
+            <ScrollView style={styles.scrollview} contentContainerStyle={{ alignItems: 'center', paddingBottom: 100 }}>
                 {
                     apps.map((item, index) => {
 
