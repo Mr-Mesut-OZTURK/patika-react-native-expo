@@ -1,9 +1,23 @@
 import ReduxProvider from "./store";
-import { jobsFunction } from "./slices/jobsAppSlice";
-import { chatFunction } from "./slices/chatAppSlice";
+import { jobsFunctions } from "./slices/jobsAppSlice";
+import { chatFunctions } from "./slices/chatAppSlice";
+import { diyetimFunctions } from "./slices/diyetimAppSlice";
+import { booksFunctions } from "./slices/booksAppSlice";
+import { marvelFunctions } from "./slices/marvelAppSlice";
+import { triviaFunctions } from "./slices/triviaAppSlice";
+import { weatherFunctions } from "./slices/weatherAppSlice";
+import { restaurantsFunctions } from "./slices/restaurantsAppSlice";
+
+
 
 export {
     ReduxProvider,
-    jobsFunction,
-    chatFunction,
+    jobsFunctions,
+    chatFunctions,
+    diyetimFunctions,
+    booksFunctions,
+    marvelFunctions,
+    triviaFunctions,
+    weatherFunctions,
+    restaurantsFunctions,
 }

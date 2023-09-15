@@ -38,7 +38,7 @@ export const chatAppSlice = createSlice({
 // Action creators are generated for each case reducer function
 const { reduxHandleLogin, reduxChatLogout } = chatAppSlice.actions;
 
-export const chatFunction = {
+export const chatFunctions = {
     reduxHandleLogin,
     reduxChatLogout,
 };

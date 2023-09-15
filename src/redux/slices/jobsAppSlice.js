@@ -62,7 +62,7 @@ export const jobsAppSlice = createSlice({
 // Action creators are generated for each case reducer function
 const { setSelectedJob, addToFavoriteJobs } = jobsAppSlice.actions
 
-export const jobsFunction = {
+export const jobsFunctions = {
     fetchJobsFromApi,
     setSelectedJob,
     addToFavoriteJobs,
